@@ -294,6 +294,18 @@ def run_thread():
             end_name   = NOTE_NAMES.get(target_note, str(target_note))
             with lock:
                 print(f"  glide  {start_name} → {end_name}  ({glide_dur:.1f}s)")
+                try:
+                    r.set('gui.last_glide', f'{start_name} → {end_name}')
+                except: pass
+                try:
+                    r.set('gui.last_glide', f'{start_name} → {end_name}')
+                except: pass
+                try:
+                    r.set('gui.last_glide', f'{start_name} → {end_name}')
+                except: pass
+                try:
+                    r.set('gui.last_glide', f'{start_name} → {end_name}')
+                except: pass
 
             # volume: whisper quiet, alpha brightens slightly
             vol = 0.06 + (a * 0.06)
